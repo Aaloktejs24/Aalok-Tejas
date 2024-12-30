@@ -71,3 +71,45 @@ if (contactForm) {
     contactForm.reset(); // Reset form fields after submission
   });
 }
+
+const carouselImages = document.querySelector('.carousel-images');
+const totalImages = document.querySelectorAll('.carousel-item').length;
+
+let currentIndex = 0; // Track the current slide
+let autoSlideInterval; // To store the interval ID
+
+// Slide to the next image
+function slideToNextImage() {
+  currentIndex = (currentIndex + 1) % totalImages;
+  updateCarouselPosition();
+}
+
+// Slide to the previous image
+function slideToPreviousImage() {
+  currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+  updateCarouselPosition();
+}
+
+// Update the carousel's position
+function updateCarouselPosition() {
+  const newTransform = -currentIndex * 100; // Slide by 100% of the container width
+  carouselImages.style.transform = `translateX(${newTransform}%)`;
+}
+
+// Start the automatic sliding
+function startAutoSlide() {
+  autoSlideInterval = setInterval(slideToNextImage, 3000); // Slide every 3 seconds
+}
+
+// Stop the automatic sliding
+function stopAutoSlide() {
+  clearInterval(autoSlideInterval);
+}
+
+// Add event listeners to stop auto-sliding when hovering over the carousel
+const carousel = document.querySelector('.carousel');
+carousel.addEventListener('mouseenter', stopAutoSlide);
+carousel.addEventListener('mouseleave', startAutoSlide);
+
+// Start auto-sliding on page load
+startAutoSlide();
