@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Aalok's personal portfolio website showcasing skills, projects, and contact details." />
     <title>Aalok - Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
     <link
@@ -13,7 +14,7 @@
   <body>
     <!-- Navbar -->
     <nav class="navbar">
-      <div style="display: flex; width: 100%; padding: 15px 50px; justify-content: space-between;">
+      <div class="navbar-container">
         <a href="#" class="logo">Aalok</a>
         <div class="nav-links">
           <a href="#about" class="nav-link">About</a>
@@ -31,7 +32,7 @@
           Hi, I'm <span class="highlight">Aalok</span>
         </h1>
         <p class="header-subtitle">Aspiring Scientist | Innovator | Dreamer</p>
-        <button id="scrollToAbout" class="btn primary-btn">Learn More</button>
+        <a href="#about" class="btn primary-btn">Learn More</a>
       </div>
     </header>
 
@@ -42,8 +43,7 @@
         <p class="section-description">
           I'm a student at IIT Kanpur with a passion for scientific research and
           innovation. Coming from a humble farmer family, I aim to bridge the
-          gap between technology and people by developing accessible scientific
-          tools.
+          gap between technology and people by developing accessible scientific tools.
         </p>
       </div>
     </section>
@@ -53,18 +53,18 @@
       <div class="container">
         <h2 class="section-title">Skills</h2>
         <div class="skills-grid">
-          <div class="skill-card">
+          <article class="skill-card">
             <h3>Programming</h3>
             <p>JavaScript, Python, MATLAB</p>
-          </div>
-          <div class="skill-card">
+          </article>
+          <article class="skill-card">
             <h3>Physics</h3>
             <p>Laser Interferometry, Quantum Mechanics</p>
-          </div>
-          <div class="skill-card">
+          </article>
+          <article class="skill-card">
             <h3>Design</h3>
             <p>Figma, HTML/CSS, UI/UX Design</p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -112,7 +112,7 @@
           Have a question, project, or just want to say hello? Feel free to
           reach out!
         </p>
-        <form id="contactForm" class="contact-form">
+        <form id="contactForm" class="contact-form" aria-label="Contact Form">
           <div class="form-group">
             <label for="nameInput">Name:</label>
             <input
@@ -140,7 +140,7 @@
               required
             ></textarea>
           </div>
-          <button type="submit" class="messagebutton">Send Message</button>
+          <button type="submit" class="btn message-btn">Send Message</button>
         </form>
       </div>
     </section>
