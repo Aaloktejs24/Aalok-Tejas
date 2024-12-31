@@ -98,7 +98,7 @@ body {
 
 /* Section Styling */
 .section {
-    padding: 50px 100px;
+    padding: 4.1666666666666vw 8.3333333333vw;
 }
 
 .section .container {
@@ -206,7 +206,7 @@ body {
 /* Awards Section */
 #awards {
     text-align: center;
-    padding: 60px 120px;
+    padding: 4.1666666666666vw 8.3333333333vw;
 }
 
 .carousel {
@@ -235,22 +235,25 @@ body {
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
-    color: #ffffff;
+    color: #ff0000;
     border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
+    width: 2.777777778vw;
+    height: 2.77777778vw;
+    font-size: 3.333vw;
     cursor: pointer;
     z-index: 10;
+    display: flex;
+    padding-bottom: 0.367777vw;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel-btn.prev {
-    left: 10px;
+    left: 0.6944444vw;
 }
 
 .carousel-btn.next {
-    right: 10px;
+    right: 0.6944444444vw;
 }
 
 .carousel-btn:hover {
@@ -258,19 +261,19 @@ body {
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 1.389vw;
 }
 
 label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: .555556vw;
     font-weight: 500;
 }
 
 input,
 textarea {
     width: 100%;
-    padding: 10px;
+    padding: 0.69444444vw;
     border: 1px solid #e5e7eb;
     border-radius: 5px;
     font-size: 1rem;
