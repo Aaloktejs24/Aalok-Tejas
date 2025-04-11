@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel - Messages</title>
+    <link rel="stylesheet" href="/admin.css" />
+  </head>
+  <body>
+    <h1>Admin Panel - Messages</h1>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Message</th>
+            <th>Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% messages.forEach(function(message) { %>
+          <tr>
+            <td class="col-name" data-label="Name"><%= message.name %></td>
+            <td class="col-email" data-label="Email"><%= message.email %></td>
+            <td class="col-message" data-label="Message"><%= message.message %></td>
+            <td class="col-date" data-label="Date">
+              <%= message.date.toISOString().split('T')[0] %>
+            </td>
+            <td class="col-actions" data-label="Actions">
+              <form action="/admin/messages/delete" method="POST">
+                <input
+                  type="hidden"
+                  name="messageId"
+                  value="<%= message._id %>"
+                />
+                <button type="submit">Delete</button>
+              </form>
+            </td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
