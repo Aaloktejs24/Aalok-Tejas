@@ -28,7 +28,12 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
 app.use(express.static(path.join(__dirname, '../public')));
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../index.html'));
+});
 
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
@@ -71,10 +76,13 @@ app.post('/admin/messages/delete', async (req, res) => {
 });
 
 io.on('connection', (socket) => {
-  socket.on('disconnect', () => {});
+  console.log('New socket connected');
+  socket.on('disconnect', () => {
+    console.log('Socket disconnected');
+  });
 });
 
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`✅ Server running on http://localhost:${PORT}`);
 });
