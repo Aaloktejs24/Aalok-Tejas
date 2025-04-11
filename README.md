@@ -1,2 +1,0 @@
-# Aalok-Tejas
-Portfolio
