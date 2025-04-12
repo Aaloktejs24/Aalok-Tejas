@@ -250,6 +250,7 @@ label {
 input,
 textarea {
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
     width: 100%;
     padding: 7px 10px;
     border: 1px solid #1e3a8a;
