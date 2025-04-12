@@ -69,7 +69,7 @@ if (contactForm) {
     const message = document.getElementById('message').value.trim();
 
     try {
-      const response = await fetch('http://localhost:3000/api/message', {
+      const response = await fetch("https://aalok-tejas.onrender.com/api/message", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, message })
