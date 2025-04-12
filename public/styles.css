@@ -244,20 +244,15 @@ body {
 label {
     display: block;
     margin-bottom: .555556vw;
-    font-weight: 500;
+    font-weight: bold;
 }
 
 input,
 textarea {
+    font-family: 'Times New Roman', Times, serif;
     width: 100%;
-    padding: 0.69444444vw;
-    border: 1px solid #e5e7eb;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-textarea {
-    resize: vertical;
+    padding: 7px 10px;
+    border: 1px solid #1e3a8a;
 }
 
 .btn.message-btn {
