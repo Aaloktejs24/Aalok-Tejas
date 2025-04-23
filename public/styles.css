@@ -264,7 +264,7 @@ textarea {
     background-color: transparent;
     backdrop-filter: blur(500px);
     border: 0.138vw solid #fbbf24;
-    border-radius: 5px;
+    color: #ffffff;
 }
 
 input::placeholder,
