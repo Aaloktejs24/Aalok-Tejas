@@ -31,10 +31,6 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, '../public')));
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../index.html'));
-});
-
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
@@ -76,9 +72,7 @@ app.post('/admin/messages/delete', async (req, res) => {
 });
 
 io.on('connection', (socket) => {
-  console.log('New socket connected');
   socket.on('disconnect', () => {
-    console.log('Socket disconnected');
   });
 });
 

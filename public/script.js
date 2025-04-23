@@ -91,7 +91,6 @@ if (contactForm) {
   });
 }
 
-// Carousel logic
 const carouselImages = document.querySelector('.carousel-images');
 const totalImages = document.querySelectorAll('.carousel-item').length;
 let currentIndex = 0;
@@ -109,6 +108,7 @@ function slideToPreviousImage() {
 
 function updateCarouselPosition() {
   const newTransform = -currentIndex * 100;
+  carouselImages.style.transform = `translateX(${newTransform}%)`;
   carouselImages.style.transform = `translateX(${newTransform}%)`;
 }
 
@@ -128,7 +128,6 @@ startAutoSlide();
 
 const socket = io();
 socket.on('newMessage', (msg) => {
-  console.log('📥 New message received:', msg);
 
   const messageBox = document.getElementById('realtime-messages');
   if (messageBox) {
