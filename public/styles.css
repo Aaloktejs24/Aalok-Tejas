@@ -5,8 +5,11 @@
 }
 
 body {
-    background-color: #ffffff;
-    color: #333333;
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .navbar {
@@ -25,7 +28,7 @@ body {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 700;
     color: #ffffff;
     text-decoration: none;
@@ -49,7 +52,7 @@ body {
 }
 
 .header {
-    background: linear-gradient(to bottom, #1e3a8a, #3b82f6);
+    background: linear-gradient(to bottom, #1e3b8a99, #3b83f699);
     color: #ffffff;
     text-align: center;
     padding: 100px 20px;
@@ -57,12 +60,12 @@ body {
 }
 
 .header-title {
-    font-size: 2.5rem;
+    font-size: 40px;
     font-weight: 700;
 }
 
 .header-subtitle {
-    font-size: 1.25rem;
+    font-size: 20px;
     margin: 15px 0;
 }
 
@@ -77,7 +80,7 @@ body {
     padding: 12px 24px;
     border-radius: 8px;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     transition: background-color 0.3s ease;
     margin-top: 10px;
@@ -96,24 +99,25 @@ body {
 }
 
 .section .container {
-    background-color: #eff5ff;
+    backdrop-filter: blur(5px);
+    background: linear-gradient(to bottom, #1e3b8a99, #3b83f699);
     padding: 4.1666666666vw 8.3333333333vw;
     border-radius: 8px;
 }
 
 .section-title {
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 700;
     text-align: center;
     margin-bottom: 20px;
-    color: #1e3a8a;
+    color: #fbbf24;
 }
 
 .section-description {
     text-align: center;
     margin-bottom: 30px;
-    font-size: 1rem;
-    color: #555555;
+    font-size: 16px;
+    color: #fff;
 }
 
 .grid-general {
@@ -123,7 +127,7 @@ body {
 }
 
 .skill-card {
-    background-color: #ffffff;
+    backdrop-filter: blur(500px);
     border-radius: 8px;
     padding: 20px;
     text-align: center;
@@ -137,17 +141,17 @@ body {
 }
 
 .skill-card h3 {
-    color: #1e3a8a;
-    font-size: 1.25rem;
+    color: #00ffe5;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
 .skill-card p {
-    color: #555555;
+    color: #ffffff;
 }
 
 .project-card {
-    background-color: #ffffff;
+    backdrop-filter: blur(500px);
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -155,17 +159,19 @@ body {
 }
 
 .project-card h3 {
-    color: #1e3a8a;
-    font-size: 1.25rem;
+    color: #00ffe5;
+    font-size: 20px;
 }
 
 .project-card p {
     margin: 10px 0;
+    color: #ffffff;
 }
 
 .details {
     display: none;
     margin-top: 10px;
+    color: #ffffff;
 }
 
 .btn.details-btn {
@@ -174,7 +180,7 @@ body {
     padding: 8px 16px;
     border: none;
     border-radius: 5px;
-    font-size: 0.9rem;
+    font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -246,15 +252,24 @@ label {
     display: block;
     margin-bottom: .555556vw;
     font-weight: bold;
+    color: #00ffe5;
 }
 
 input,
 textarea {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 1rem;
+    font-size: 16px;
     width: 100%;
     padding: 7px 10px;
-    border: 1px solid #1e3a8a;
+    background-color: transparent;
+    backdrop-filter: blur(500px);
+    border: 0.138vw solid #fbbf24;
+    border-radius: 5px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #ffffff;
 }
 
 .btn.message-btn {
@@ -277,7 +292,7 @@ textarea {
     color: #ffffff;
     text-align: center;
     padding: 15px 0;
-    font-size: 0.9rem;
+    font-size: 16px;
     margin-top: 2.1666666666666vw;
 }
 
@@ -301,6 +316,6 @@ textarea {
     }
 
     .btn {
-        font-size: 0.9rem;
+        font-size: 16px;
     }
 }
