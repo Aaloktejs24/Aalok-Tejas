@@ -13,7 +13,8 @@ body {
 }
 
 .navbar {
-    background-color: #1e3a8a;
+    background-color: #1e3b8a99;
+    backdrop-filter: blur(50px);
     color: #ffffff;
     position: sticky;
     top: 0;
@@ -52,11 +53,10 @@ body {
 }
 
 .header {
-    background: linear-gradient(to bottom, #1e3b8a99, #3b83f699);
+    
     color: #ffffff;
     text-align: center;
-    padding: 100px 20px;
-    margin-bottom: 2.1666666666666vw;
+    padding: 6.9vw 20px;
 }
 
 .header-title {
